@@ -1,0 +1,237 @@
+
+/* Umumiy sozlamalar */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url("background1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  animation: fadein 1s ease-in;
+}
+
+
+/* Header qismi */
+header {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("div fon.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px) brightness(0.6);
+  z-index: -1;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+p {
+
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+/* Container va kartochkalar */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: fadein 1.5s ease-in;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Rasm uchun maxsus o'lchamlar */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card h3 {
+  font-size: 24px;
+  color: #0077b6;
+  margin-top: 15px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+/* Linklar */
+a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #023e8a;
+}
+
+/* Footer */
+footer {
+  background-color: #5199c0;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Xaritani ko‘rsatish */
+#map {
+  height: 60vh;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Details qismi */
+details {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #0077b6;
+  background-color: #f0f0f0;
+}
+
+details[open] summary::after {
+  content: "–";
+  font-weight: bold;
+}
+
+details summary::after {
+  content: "+";
+  font-weight: bold;
+}
+
+/* Kirish uchun animatsiya */
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+header {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Asosiy kontent uchun stil */
+.main-content {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Dashboard uchun stil */
+.dashboard {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.dashboard-item {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dashboard-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .card {
+    width: calc(33% - 20px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .card p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  .card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+}
